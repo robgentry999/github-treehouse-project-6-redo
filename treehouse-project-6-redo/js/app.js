@@ -77,9 +77,9 @@ qwerty.addEventListener("click", (e) => {
     
       let result = checkLetter(button);
     
-     if(!result === null) {
+     if(result === null) {
          const down = document.querySelectorAll(".tries img")[missed];
-         down.src='/Users/robertgentry/Documents/Coding-Projects/Treehouse/github-treehouse-project-6/treehouse-project-6/images/lostHeart.png';
+         down.src='images/lostHeart.png';
          missed++
      }
 
