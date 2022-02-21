@@ -67,9 +67,8 @@ function checkLetter(button){
 }
 
 qwerty.addEventListener("click", (e) => {
-    let button = e.target;
     
-     if (button.tagName === "BUTTON" || button.className ==="chosen") {
+     if (e.target.tagName === "BUTTON") {
          const button = e.target;
     
      //if button chosen, add chosen class
@@ -78,7 +77,7 @@ qwerty.addEventListener("click", (e) => {
     
       let result = checkLetter(button);
     
-     if(result === null) {
+     if(!result === null) {
          const down = document.querySelectorAll(".tries img")[missed];
          down.src='/Users/robertgentry/Documents/Coding-Projects/Treehouse/github-treehouse-project-6/treehouse-project-6/images/lostHeart.png';
          missed++
